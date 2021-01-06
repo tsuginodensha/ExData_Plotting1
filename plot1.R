@@ -1,5 +1,5 @@
 ######################### import, clean and subset dataset ##########################
-
+power <- read.table("household_power_consumption.txt",header = TRUE,sep = ";",na.strings = "?")
 library(lubridate)
 power$Date=dmy(power$Date)
 power$datetime = ymd_hms(paste(power$Date, power$Time))
